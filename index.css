@@ -1,0 +1,578 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url(/images/pic5.jpg);
+    background-size: contain;
+    color: #0e1c1e;
+    overflow-x: hidden;
+}
+
+
+/* ================= FLOATING ELEMENTS ================= */
+
+.floating-elements span {
+    position: fixed;
+    z-index: 10;
+    font-size: 22px;
+    pointer-events: none;
+    animation: float 7s linear infinite;
+    opacity: 0.7;
+}
+
+.floating-elements span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-elements span:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.floating-elements span:nth-child(3) {
+    left: 45%;
+    animation-delay: 4s;
+}
+
+.floating-elements span:nth-child(4) {
+    left: 65%;
+    animation-delay: 1s;
+}
+
+.floating-elements span:nth-child(5) {
+    left: 80%;
+    animation-delay: 3s;
+}
+
+.floating-elements span:nth-child(6) {
+    left: 90%;
+    animation-delay: 5s;
+}
+
+@keyframes float {
+
+    0% {
+        bottom: -50px;
+        transform: translateX(0) rotate(0deg);
+    }
+
+    100% {
+        bottom: 110%;
+        transform: translateX(80px) rotate(360deg);
+    }
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+   /* background:
+        radial-gradient(circle at top left, #ffd9eb, transparent 35%),
+        radial-gradient(circle at bottom right, #ddd8ff, transparent 35%),
+        #fff8fc;*/
+
+    position: relative;
+}
+
+.heartbeat {
+    color: #edecec;
+    font-size: 22px;
+    margin-bottom: 40px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+.medical-icon {
+    font-size: 55px;
+    margin-bottom: 20px;
+
+    animation: doctorFloat 3s ease-in-out infinite;
+}
+
+@keyframes doctorFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.small-text {
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: #18050f;
+}
+
+.hero h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(55px, 9vw, 100px);
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    display: block;
+    color: #041b09;
+}
+
+.hero-subtitle {
+    max-width: 650px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ba7712;
+}
+
+.start-btn,
+.surprise-btn {
+    margin-top: 30px;
+
+    padding: 15px 30px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: #390919;
+    color: rgb(239, 230, 230);
+
+    font-size: 15px;
+    font-family: inherit;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 30px rgba(189, 179, 182, 0.3);
+
+    transition: 0.3s;
+}
+
+.start-btn:hover,
+.surprise-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(223, 71, 120, 0.4);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 25px;
+    font-size: 12px;
+    color: #987d8c;
+}
+
+
+/* ================= COMMON ================= */
+
+section {
+    padding: 100px 7%;
+}
+
+.section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+.section-title h2 {
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(35px, 5vw, 55px);
+    color: #a52b82;
+}
+
+.section-description {
+    text-align: center;
+    color: #806c79;
+    margin-bottom: 45px;
+}
+
+
+/* ================= WISH ================= */
+
+.wish-section {
+    background: #ccbcbc;
+}
+
+.wish-card {
+    max-width: 750px;
+    margin: auto;
+
+    padding: 50px;
+
+    text-align: center;
+
+    border-radius: 30px solid rgb(145, 89, 89);
+    border: #171522 2px;
+
+    background: rgba(255, 240, 247, 0.7);
+
+    border: 1px solid #f4d7e5;
+
+    box-shadow: 0 20px 60px rgba(180, 120, 150, 0.12);
+}
+
+.doctor-symbol {
+    font-size: 55px;
+    color: #df4778;
+    margin-bottom: 15px;
+}
+
+.wish-card h2 {
+    font-family: "Dancing Script", cursive;
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+.wish-card p {
+    line-height: 1.9;
+    margin: 15px 0;
+    color: #6d5965;
+}
+
+.wish-card .highlight {
+    color: #df4778;
+    font-weight: 600;
+}
+
+.signature {
+    margin-top: 35px;
+    font-family: "Dancing Script", cursive;
+    font-size: 25px;
+}
+
+
+/* ================= PRESCRIPTION ================= */
+
+.doctor-section {
+   background:
+        linear-gradient(135deg, #f8e9ff, #ffeaf3);*/
+}
+
+.prescription {
+    max-width: 700px;
+    margin: 45px auto 0;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    box-shadow: 0 20px 60px rgba(100, 70, 100, 0.15);
+
+    overflow: hidden;
+}
+
+.prescription-header {
+    padding: 20px 25px;
+
+    display: flex;
+    justify-content: space-between;
+
+    /*background: #df4778;*/
+    color: white;
+
+    font-weight: 600;
+}
+
+.prescription-body {
+    padding: 35px;
+}
+
+.prescription-body p {
+    margin: 18px 0;
+    line-height: 1.6;
+}
+
+.prescription-body hr {
+    border: none;
+    border-top: 1px dashed #ddd;
+    margin: 25px 0;
+}
+
+.doctor-advice {
+    color: #df4778;
+    font-weight: 600;
+}
+
+.prescription-footer {
+    text-align: center;
+    padding: 18px;
+    background: #fff1f6;
+    color: #df4778;
+    font-size: 13px;
+}
+
+
+/* ================= MEMORIES ================= */
+
+.memories-section {
+    background: #fff;
+}
+
+.memory-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.memory-card {
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 45px rgba(100, 70, 90, 0.12);
+
+    transition: 0.4s;
+}
+
+.memory-card:hover {
+    transform: translateY(-10px) rotate(1deg);
+}
+
+.memory-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.memory-caption {
+    padding: 22px;
+}
+
+.memory-caption h3 {
+    font-family: "Dancing Script", cursive;
+    font-size: 27px;
+    color: #df4778;
+}
+
+.memory-caption p {
+    margin-top: 7px;
+    font-size: 14px;
+    color: #806c79;
+}
+
+
+/* ================= VIDEO ================= */
+
+.video-section {
+    background:
+        radial-gradient(circle at center, #fce4ef, #eee9ff);
+    text-align: center;
+}
+
+.video-container {
+    max-width: 850px;
+    margin: 40px auto 20px;
+
+    padding: 10px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow: 0 20px 60px rgba(100, 70, 100, 0.2);
+}
+
+.video-container video {
+    width: 100%;
+    max-height: 600px;
+    display: block;
+    border-radius: 18px;
+}
+
+.video-text {
+    color: #806c79;
+}
+
+
+/* ================= FINAL ================= */
+
+.final-section {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 30% 20%, #54294b, transparent 40%),
+        radial-gradient(circle at 70% 80%, #382c63, transparent 40%),
+        #171522;
+
+    color: white;
+
+    position: relative;
+}
+
+.stars {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.final-heart {
+    font-size: 75px;
+
+    animation: heartBeat 1.2s infinite;
+}
+
+@keyframes heartBeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.final-section h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(55px, 9vw, 100px);
+}
+
+.final-section h2 {
+    font-family: "Dancing Script", cursive;
+    font-size: 45px;
+    color: #ff9bc0;
+}
+
+.final-section > p {
+    max-width: 650px;
+    margin: 15px auto;
+    line-height: 1.8;
+    color: #d9d1db;
+}
+
+.final-message {
+    max-width: 600px;
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border-left: 2px solid #ff8fb7;
+    border-right: 2px solid #ff8fb7;
+
+    font-family: "Dancing Script", cursive;
+    font-size: 25px;
+
+    color: #ffc4d8;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+
+    font-size: 11px;
+    color: #8e8490;
+}
+
+
+/* ================= CONFETTI ================= */
+
+.confetti {
+    position: fixed;
+    top: -20px;
+
+    font-size: 25px;
+
+    z-index: 999;
+
+    animation: fall 4s linear forwards;
+}
+
+@keyframes fall {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    section {
+        padding: 75px 5%;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .wish-card {
+        padding: 30px 20px;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .memory-card img {
+        height: 300px;
+    }
+
+    .prescription-body {
+        padding: 25px;
+    }
+
+    .final-message {
+        font-size: 21px;
+    }
+}
+```
