@@ -9,7 +9,13 @@ function scrollToSection(sectionId) {
         });
     }
 }
+function openSurprise() {
+    document.getElementById("imagePopup").style.display = "flex";
+}
 
+function closeSurprise() {
+    document.getElementById("imagePopup").style.display = "none";
+}
 
 // Final birthday celebration
 function celebrate() {
